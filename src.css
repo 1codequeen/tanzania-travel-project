@@ -1,0 +1,42 @@
+
+header{
+    max-width: 1200px;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url(images/tanzania.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    display: block;
+    
+}
+
+h1{
+    color: white;
+    font-family: "Pacifico", cursive;
+    font-weight: 300;
+    font-style: normal; 
+    font-size: 80px;
+    text-align: center;
+    
+
+}
+
+button{
+    background-color: aliceblue;
+    padding: 20px;
+    font-weight: 200;
+    margin-top: 70px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    border-radius: 6px;        /* Rounded corners */
+    font-size: 16px;           /* Text size */
+    cursor: pointer; 
+}
