@@ -4,7 +4,7 @@ body {
   }
   
   .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
   }
   
@@ -15,8 +15,8 @@ body {
   }
   .img-responsive{
     max-width: 100%;
-    width: 600px;   
-    height: 400px;
+  height: auto;
+  display: block;
   }
   .grid-2-columns {
     grid-template-columns: 1fr 1fr;
@@ -27,9 +27,8 @@ body {
 
   
   section {
-    max-width: 1500px;
-    margin: 0 auto;
     padding: 100px 0;
+  
   }
   
 header{
