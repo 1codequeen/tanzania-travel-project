@@ -1,6 +1,6 @@
 body {
     font-family: "Poppins", sans-serif;
-    background: lightcyan;
+    background:white  ;
   }
   
   .container {
@@ -11,16 +11,27 @@ body {
   .grid {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
+    grid-gap: 26px;
   }
-  
-  section {
-    max-width: 1200px;
-    margin: 0 auto;
+  .img-responsive{
+    max-width: 100%;
+    width: 600px;   
+    height: 400px;
+  }
+  .grid-2-columns {
+    grid-template-columns: 1fr 1fr;
   }
   .grid-3-columns-with-first-narrow {
     grid-template-columns: 1fr 2fr 2fr;
   }
 
+  
+  section {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+  
 header{
     max-width: 1200px;
     margin: 0 auto;
@@ -62,6 +73,40 @@ button{
     font-size: 16px;           
     cursor: pointer; 
 }
+main {
+  background-color:#f4e1c1;
+
+
+}
+
+main h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 5px;
+  color: #272044;
+  opacity: 0.3;
+  text-transform: uppercase;
+}
+
+main h3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.5;
+  color: #272044;
+  margin: 0;
+}
+
+main p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #272044;
+  opacity: 0.7;
+}
+
 
 footer{
     max-width: 1200px;
@@ -71,7 +116,14 @@ footer{
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    height: 200px; 
     padding: 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    display: block;
     
 }
 footer h3 {
@@ -86,10 +138,11 @@ footer h3 {
     opacity: 0.7;
     margin-right: 20px;
     line-height: 24px;
+   
   }
   
   footer ul {
-    padding: 0;
+    padding: 0; 
   }
   
   footer li {
