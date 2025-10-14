@@ -1,126 +1,98 @@
+/* Base */
 body {
-    font-family: "Poppins", sans-serif;
-    background:lightcyan  ;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-gap: 26px;
-  }
-  .img-responsive{
-    max-width: 100%;
-  height: auto;
+  font-family: "Poppins", sans-serif;
+  background: #61b390;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grids */
+.grid { 
+  display: grid;
+  gap: 26px;            /* use 'gap' instead of grid-gap */
+}
+
+/* Define columns ONLY on modifiers */
+.grid-2-columns { grid-template-columns: 1fr 1fr; }
+.grid-3-columns { grid-template-columns: 1fr 1fr 1fr; }
+.grid-3-columns-with-first-narrow { grid-template-columns: 1fr 2fr 2fr; }
+
+/* Media elements */
+.img-responsive {
+  width: 100%;
+  height: auto;         /* don't force height globally */
   display: block;
-  }
-  .grid-2-columns {
-    grid-template-columns: 1fr 1fr;
-  }
-  .grid-3-columns-with-first-narrow {
-    grid-template-columns: 1fr 2fr 2fr;
-  }
-
-  
-  section {
-    padding: 100px 0;
-  
-  }
-  .grid-3-columns {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  
-  .grid-3-columns-with-first-narrow {
-    grid-template-columns: 1fr 2fr 2fr;
-  }
-  
-  .card {
-    background: white;
-    margin: 30px 0;
-  }
-  
-  .card-body {
-    padding: 30px;
-  }
-  
-  .card-footer {
-    padding: 0 30px 30px;
-  }
-  
-  .btn {
-    display: block;
-    color: white;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    padding: 16px;
-    background-color: #462cb3;
-    text-decoration: none;
-  }
-  
-  section {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 100px;
-  }
-  
-  section.secondary {
-    background: #f8f8f8;
-  }
-  
-header{
-    max-width: 1200px;
-    margin: 0 auto;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-    url(images/tanzania.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 400px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    display: block;
-    
 }
 
-h1{
-    color: white;
-    font-family: "Pacifico", cursive;
-    font-weight: 300;
-    font-style: normal; 
-    font-size: 80px;
-    text-align: center;
-    
-
+/* In CARD HEADER specifically, make image cover nicely */
+.card-header .img-responsive {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-button{
-    background-color: aliceblue;
-    padding: 20px;
-    font-weight: 200;
-    margin-top: 70px;
-    text-decoration: none;
-    border-radius: 10px;
-    border: none;
-    border-radius: 6px;        
-    font-size: 16px;           
-    cursor: pointer; 
+/* Embed (Google Maps) */
+.embeds {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;    /* ensures visibility */
+  border: 0;
+  border-radius: 8px;
 }
-main {
-  background-color:white;
 
-
+/* Sections */
+section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 100px 0;     /* keep a single section rule */
 }
+
+section.secondary {
+  background: #698474;
+}
+
+/* Header (hero) */
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/tanzania.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;                /* keep flex */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-family: "Pacifico", cursive;
+  font-weight: 300;
+  font-style: normal; 
+  font-size: 80px;
+  text-align: center;
+}
+
+button {
+  background-color: aliceblue;
+  padding: 20px;
+  font-weight: 200;
+  margin-top: 70px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Main copy */
+main { background-color: #bad8b6; }
 
 main h2 {
   font-weight: 700;
@@ -142,7 +114,6 @@ main h3 {
 }
 
 main p {
-  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -150,68 +121,91 @@ main p {
   opacity: 0.7;
 }
 
-
-footer{
-    max-width: 1200px;
-    margin: 0 auto;
-    color: white;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/giraffe.jpg) ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    height: 200px; 
-    padding: 70px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    display: block;
-    
+/* Cards */
+.card {
+  background: black;       /* only header is black—body is white below */
+  margin: 30px 0;
+  border-radius: 8px;
+  overflow: hidden;        /* clip rounded corners for image/iframe */
 }
+
+.card-header {
+  height: 200px;
+  display: grid;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* SPECIFIC: when using header as 2 columns (image + map) */
+.card-header.grid.grid-2-columns {
+  grid-template-columns: 1fr 1fr; /* reinforce side-by-side in header */
+  min-height: 260px;
+}
+
+.card-body {
+  padding: 30px;
+  background-color: white;
+}
+
+.card-footer {
+  padding: 0 30px 30px;
+}
+
+.btn {
+  display: block;
+  color: black;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 16px;
+  background-color: #e0ffff; /* was 'light cyan' (invalid) */
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/giraffe.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  min-height: 200px;
+  padding: 70px 0;
+  display: flex;              /* keep flex */
+  align-items: center;
+  justify-content: center;
+}
+
 footer h3 {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
-  }
-  
-  footer p {
-    font-weight: 400;
-    font-size: 16px;
-    opacity: 0.7;
-    margin-right: 20px;
-    line-height: 24px;
-   
-  }
-  
-  footer ul {
-    padding: 0; 
-  }
-  
-  footer li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  footer a {
-    color: white;
-    opacity: 0.7;
-  }
-  @media (max-width: 960px) {
-    header {
-      padding: 60px 0;
-    }
-  
-    header h1 {
-      font-size: 48px;
-    }
-  
-    header h2 {
-      font-size: 20px;
-    }
-  
-    header h3 {
-      font-size: 12px;
-    }
-  }
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+footer p {
+  font-weight: 400;
+  font-size: 16px;
+  opacity: 0.7;
+  margin-right: 20px;
+  line-height: 24px;
+}
+
+footer ul { padding: 0; }
+footer li { list-style: none; margin: 0; padding: 0; }
+footer a { color: white; opacity: 0.7; }
+
+/* Responsive */
+@media (max-width: 960px) {
+  header { padding: 60px 0; height: auto; }
+  header h1 { font-size: 48px; }
+
+  /* Stack image/map vertically on small screens */
+  .card-header.grid.grid-2-columns { grid-template-columns: 1fr; }
+  .embeds { min-height: 220px; }
+}
