@@ -122,8 +122,15 @@ main p {
   opacity: 0.7;
 }
 .text-center{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  letter-spacing: 5px;
+  color: #272044;
+  text-transform: uppercase;
   text-align: center;
-  text-height: 30px;
+
 }
 
 /* Cards */
@@ -210,10 +217,36 @@ footer a { color: white; opacity: 0.7; }
 
 /* Responsive */
 @media (max-width: 960px) {
-  header { padding: 60px 0; height: auto; }
-  header h1 { font-size: 48px; }
+  header {
+    padding: 60px 0;
+  }
 
-  /* Stack image/map vertically on small screens */
-  .card-header.grid.grid-2-columns { grid-template-columns: 1fr; }
-  .embeds { min-height: 220px; }
+  header h1 {
+    font-size: 48px;
+  }
+
+  header h2 {
+    font-size: 20px;
+  }
+
+  header h3 {
+    font-size: 12px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 32px;
+  }
+
+  section {
+    padding: 30px;
+  }
+
+  .card-header img {
+    display: none;
+  }
+
+  .embed {
+    aspect-ratio: 16 / 9;
+  }
 }
