@@ -17,7 +17,7 @@ display: grid;
 
 /* Define columns ONLY on modifiers */
 .grid-2-columns { grid-template-columns: 1fr 1fr; }
-.grid-3-columns { grid-template-columns: 1fr 1fr 1fr; }
+.grid-3-columns { grid-template-columns: 1fr 1fr 1fr }
 .grid-3-columns-with-first-narrow { grid-template-columns: 1fr 2fr 2fr; }
 
 /* Media elements */
@@ -51,7 +51,8 @@ section {
 }
 
 section.secondary {
-  background: #698474;
+  background: lavenderblush;
+  padding: 100px;
 }
 
 /* Header (hero) */
@@ -120,12 +121,16 @@ main p {
   color: #272044;
   opacity: 0.7;
 }
+.text-center{
+  text-align: center;
+  text-height: 30px;
+}
 
 /* Cards */
 .card {
   background: black;       /* only header is black—body is white below */
   margin: 30px 0;
-  border-radius: 8px;
+ border-radius: 8px;
   overflow: hidden;        /* clip rounded corners for image/iframe */
 }
 
@@ -134,6 +139,9 @@ main p {
   display: grid;
   gap: 20px;
   align-items: stretch;
+}
+.card-header.grid{
+  grid-gap:0;
 }
 
 /* SPECIFIC: when using header as 2 columns (image + map) */
